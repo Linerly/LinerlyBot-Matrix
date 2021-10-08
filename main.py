@@ -2,8 +2,6 @@ import os
 import random
 import pyjokes
 import requests
-
-from webserver import keep_alive
 from quoters import Quote
 
 from matrix_bot_api.matrix_bot_api import MatrixBotAPI
