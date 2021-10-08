@@ -1,11 +1,3 @@
-"""
-A test bot using the Python Matrix Bot API
-Test it out by adding it to a group chat and try out the things below, or say !help to get a list of commands:
-1. Say "Hi"
-2. Say !echo this is a test!
-3. Say !d6 to get a random size-sided die roll result
-"""
-
 import os
 import random
 import pyjokes
@@ -21,7 +13,7 @@ from matrix_bot_api.mcommand_handler import MCommandHandler
 # Global variables
 USERNAME = "linerlybot-matrix"         # Bot's username
 PASSWORD = os.environ['PASSWORD']       # Bot's password
-SERVER = "https://matrix-client.matrix.org"  # Matrix server URL
+SERVER = os.environ['SERVER']  # Matrix server URL
 
 
 def help_callback(room, event):
@@ -30,7 +22,7 @@ def help_callback(room, event):
 
 def hi_callback(room, event):
     # Somebody said hi, let's say something
-    room.send_html("Hello there, " + event['sender'] + "!<br><br>I'm LinerlyBot.<br>I used to be on Discord only, but now I'm also here in the Matrix universe!<br>You can type <code>!help</code> to get a list of commands that you can use.<br><br><i>⚠ at the moment, LinerlyBot <b>does not</b> support encryption</i>")
+    room.send_html("Hello there, " + event['sender'] + "!<br><br>I'm LinerlyBot.<br>I used to be on Discord only, but now I'm also here in the Matrix universe!<br>You can type <code>!help</code> to get a list of commands that you can use.")
 
 
 def echo_callback(room, event):
@@ -125,5 +117,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-keep_alive()
