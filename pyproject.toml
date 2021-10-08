@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "repl_python3_linerlybot-matrix"
+name = "linerlybot-matrix"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+description = "LinerlyBot is also a Matrix bot as well!"
+authors = ["Linerly"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
